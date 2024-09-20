@@ -1,0 +1,190 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Core: Reporting, Insights &amp; Views</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+</style>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arvo', Helvetica, Arial, sans-serif !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* Subscribe Section */
+  .banner-subcr {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./head-img-core.jpg') no-repeat center center/cover;
+    padding: 40px 0;
+  }
+
+  .overlay-bnr-sur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00a880;
+    opacity: 0.8;
+    z-index: 1;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .subscribe-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+  }
+
+  .subscribe-lefbox {
+    width: 55%;
+  }
+
+  .subscribe-lefbox h2 {
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Arvo';
+    font-weight: bold;
+  }
+
+  .subscribe-lefbox h3 {
+    font-weight: normal;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .subscribe-lefbox .terms {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ddd;
+  }
+
+  .subscribe-lefbox .terms a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .subscribe-rigbox {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /* Form and Button Styling */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .subscribe-btn {
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .subscribe-btn:hover {
+    background-color: #000;
+  }
+
+  /* Media Queries for responsiveness */
+  @media (max-width: 1024px) {
+    .subscribe-lefbox h2 {
+      font-size: 2.5rem;
+    }
+
+    .subscribe-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .subscribe-rigbox {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .subscribe-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .subscribe-lefbox,
+    .subscribe-rigbox {
+      width: 100%;
+    }
+
+    .subscribe-lefbox h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .subscribe-lefbox h2 {
+      font-size: 1.8rem;
+    }
+
+    .subscribe-rigbox {
+      width: 100%;
+    }
+
+    .subscribe-lefbox h3 {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<section class="banner-subcr">
+  <div class="overlay-bnr-sur"></div>
+  <div class="subscribe-container">
+    <div class="subscribe-lefbox">
+      <h2>Get Smarter in Just 5 Minutes</h2>
+      <h3>Stay informed with The Core. Receive insightful updates on India’s business, markets, and
+        economic policies every weekday morning.</h3>
+    </div>
+    <div class="subscribe-rigbox">
+      <div class="form-container">
+        <div class="pub_wrapper subscribe_btn_box popup-main-class">
+          <button aria-label="Name" type="button" role="button" data-bs-toggle="modal"
+            class="btn-sub-block popuplink secondary_font login-btn-popup subscribe-btn">
+            Subscribe Now!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
