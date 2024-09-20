@@ -553,7 +553,10 @@ span.author_details_block span.date.new-line-in-mobile {
     flex-wrap: wrap;
     justify-content: center;
   }
-
+  .title-with-more {
+    width: 100%;
+    margin-bottom: 15px;
+}
   .top-stories {
     flex-direction: column;
   }
