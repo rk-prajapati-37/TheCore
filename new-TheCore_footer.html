@@ -1,0 +1,109 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Core: Reporting, Insights &amp; Views</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+</style>
+
+
+
+<style>
+  /* Footer Section Styling */
+  .therocfooter-section {
+    position: relative;
+    background: linear-gradient(to bottom, #e91e63, #2196f3);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .therocfooter-logo {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  .therocfooter-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px auto;
+  }
+
+  .therocfooter-text b {
+    font-weight: 900;
+  }
+
+  .therlogin-btn {
+    display: inline-block;
+    background-color: #00bfa5;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: 2px solid #00bfa5;
+    font-size: large;
+  }
+
+  .therlogin-btn:hover {
+    background-color: #009688;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .close-btn span {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .therocfooter-section {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .login-btn {
+      margin-top: 20px;
+    }
+  }
+</style>
+
+
+<div class="therocfooter-section">
+  <div class="content">
+    <img
+      src="https://img-cdn.thepublive.com/fit-in/492x491/filters:format(webp)/thecore/media/media_files/99Df13EZNMW5I7PU7L0T.png"
+      alt="The Core Logo" class="therocfooter-logo">
+
+    <p class="therocfooter-text">
+      <b>Join Us: It’s Free and Easy</b>
+      <br><br>
+      At The Core, we go beyond the headlines, offering nuanced perspectives on the trends and policies impacting
+      businesses in the listed universe and the economy. By registering, you provide valuable insights into what matters
+      to you, allowing us to serve you better.
+    </p>
+    <!-- <a href="#" class="therlogin-btn">Sign up for Free / Sign In</a> -->
+
+    <button role="button" data-bs-toggle="modal" tabindex="0" class="login-btn-popup therlogin-btn">Sign up for Free /
+      Sign In</button>
+  </div>
+  <div class="close-btn">
+    <span>X</span>
+  </div>
+</div>
