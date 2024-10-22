@@ -19,6 +19,7 @@
 
 
 <style>
+ <style>
   :root {
     --main-heading-size: 46px;
     --main-heading-family: "Arvo";
@@ -508,7 +509,7 @@
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Arvo';
-    font-size: 3vw;
+    font-size: var(--main-heading-size);
   }
 
   .section-header p {
@@ -540,11 +541,12 @@
   }
 
   .testimonial-text {
-    font-size: 18px;
     color: #000;
-    line-height: 1.2;
     text-align: left;
-    font-family: 'Raleway';
+    font-size: var(--heading2-size);
+    font-family: var(--heading2-family);
+    margin-top: var(--heading-top-maring);
+    line-height: 1.8rem;
   }
 
   .read-more {
@@ -559,11 +561,11 @@
   }
 
   .testimonial-author {
-    font-size: 1.3vw;
     font-weight: 500;
     color: #000;
-    margin-top: 20px;
-    font-family: 'Arvo';
+    font-size: var(--heading2-size);
+    font-family: var(--heading2-family);
+    margin-top: var(--heading-top-maring);
   }
 
   .testimonial-position {
