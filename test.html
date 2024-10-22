@@ -1,0 +1,846 @@
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet" />
+<!-- Include FontAwesome for icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- Include Swiper Styles -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+
+<style>
+  :root {
+    --main-heading-size: 46px;
+    --main-heading-family: "Arvo";
+    --heading2-size: 24px;
+    --heading2-family: "Raleway";
+    --heading-top-maring: 1.6rem;
+    --subscribe-btn-padding: 0.8rem 6rem;
+    --line-height: 2.2rem;
+  }
+
+  .static_page_content {
+    margin: 0px !important;
+  }
+
+  .abh-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .abh-container-full {
+    width: 100%;
+  }
+
+  .hero-section {
+    position: relative;
+    /* width: 100%;
+    height: 100vh; Adjust height as needed */
+    background-image: url("https://www.thecore.in/h-upload/2024/09/20/980432-coresubsctibehead-image.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .overlay {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 44, 95, 0.85) 5.5%, rgba(0, 0, 0, 0.85) 68.5%) !important;
+    padding: 8rem 0;
+  }
+
+  .abh-container .companyname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 0.8rem;
+  }
+
+  .abh-container .companyname img {
+    width: 30px;
+  }
+
+  .abh-container .companyname span {
+    color: white !important;
+    font-size: var(--heading2-size);
+    font-family: var(--main-heading-family);
+  }
+
+  .hero-section .heading {
+    font-family: "Arvo", sans-serif;
+    color: white !important;
+    font-size: var(--main-heading-size);
+  }
+
+  .hero-section .title {
+    font-family: "Raleway", sans-serif;
+    color: white !important;
+    font-size: var(--heading2-size);
+    margin: auto;
+    margin-top: var(--heading-top-maring);
+    width: 60%;
+    line-height: var(--line-height);
+  }
+
+  .gradient-white-lightblue {
+    background: linear-gradient(180deg, #FFF 0%, #F3F5FF 100%) !important;
+  }
+
+  .gradient-white-lightblue .maindiv {
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .gradient-white-lightblue .maindiv .blue-white-button {
+    margin: auto;
+    border-radius: 10px;
+    background: #1672DC !important;
+    padding: var(--subscribe-btn-padding);
+    border: none;
+    color: white !important;
+    font-family: "Raleway";
+    font-size: calc(var(--heading2-size));
+    font-weight: bolder;
+  }
+
+  .section-smartnews {
+    background-color: #00a87f !important;
+    margin: auto;
+  }
+
+  .section-smartnews .abh-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .section-smartnews .abh-container .left {
+    width: 50%;
+    color: white !important;
+  }
+
+  .section-smartnews .abh-container .left .title {
+    font-size: var(--main-heading-size);
+    font-family: var(--main-heading-family);
+  }
+
+  .section-smartnews .abh-container .left .para {
+    font-size: var(--heading2-size);
+    font-family: var(--heading2-family);
+    margin-top: var(--heading-top-maring);
+    line-height: 1.8rem;
+    width: 80%;
+  }
+
+  .section-smartnews .abh-container .right {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .our-latest-post-section .abh-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .our-latest-post-section .abh-container .title {
+    font-size: var(--main-heading-size);
+    font-family: var(--main-heading-family);
+  }
+
+  .our-latest-post-section .abh-container .widget-holder {
+    margin-top: var(--heading-top-maring);
+  }
+
+  .our-latest-post-section .abh-container .widget-holder iframe {
+    width: 100%;
+  }
+
+  .our-latest-post-section .abh-container .maindiv {
+    text-align: center;
+  }
+
+  .our-latest-post-section .abh-container .maindiv .blue-white-button {
+    margin: auto;
+    border-radius: 10px;
+    background: #00a87f !important;
+    padding: var(--subscribe-btn-padding);
+    border: none;
+    color: white !important;
+    font-family: "Raleway";
+    font-size: var(--heading2-size);
+    font-weight: bolder;
+  }
+
+  .section-why-subscribe-us {
+    background-color: #1672DC !important;
+  }
+
+  .section-why-subscribe-us .abh-container {
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    color: white !important;
+  }
+
+  .section-why-subscribe-us .abh-container .left {
+    width: 50%;
+    padding-right: 2rem;
+  }
+
+  .section-why-subscribe-us .abh-container .left .title {
+    font-size: var(--main-heading-size);
+    font-family: var(--main-heading-family);
+  }
+
+  .section-why-subscribe-us .abh-container .left ul {
+    list-style-type: none;
+    /* Remove default bullets */
+    margin-top: var(--heading-top-maring);
+    padding-left: 0;
+    width: 90%;
+  }
+
+  .section-why-subscribe-us .abh-container .left li {
+    position: relative;
+    padding-left: 30px;
+    /* Add space for the image */
+    margin-bottom: calc(var(--heading-top-maring) * 1);
+  }
+
+  .section-why-subscribe-us .abh-container .left li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    /* Set desired width */
+    height: 25px;
+    /* Set desired height */
+    background-image: url("/images/done.png") !important;
+    /* Your image */
+    background-size: contain;
+    /* Adjust the image to fit the box */
+    background-repeat: no-repeat;
+  }
+
+  .section-why-subscribe-us .abh-container .left .ul-heading {
+    font-family: var(--main-heading-family);
+    font-size: calc(var(--heading2-size) * 0.9);
+    margin-bottom: 0.4rem;
+  }
+
+  .section-why-subscribe-us .abh-container .left .ul-text {
+    font-family: var(--heading2-family);
+    font-size: calc(var(--heading2-size) * 0.8);
+    margin-top: 1rem;
+  }
+
+  .section-why-subscribe-us .abh-container .right {
+    width: 50%;
+    text-align: center;
+  }
+
+  .section-why-subscribe-us .abh-container .right img {
+    width: 80%;
+  }
+
+  button span {
+    font-weight: bold;
+  }
+
+  .custom-h2 {
+    line-height: 1.4 !important;
+  }
+
+  .login-btn-popup {
+    padding: 15px 50px;
+  }
+
+  @media (max-width: 1240px) {
+    :root {
+      --main-heading-size: 36px;
+      --heading2-size: 20px;
+      --heading-top-maring: 1.2rem;
+      --subscribe-btn-padding: 0.6rem 3rem;
+    }
+
+    .abh-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .section-smartnews .abh-container .right {
+      width: 44%;
+    }
+
+    .our-latest-post-section .abh-container {
+      width: 98%;
+    }
+
+    .section-why-subscribe-us .abh-container {
+      justify-content: space-between;
+    }
+
+    .section-why-subscribe-us .abh-container .left li::before {
+      width: 20px;
+      height: 20px;
+    }
+
+    .section-why-subscribe-us .abh-container .right {
+      width: 42%;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    :root {
+      --main-heading-size: 30px;
+      --heading2-size: 18px;
+      --heading-top-maring: 1rem;
+      --subscribe-btn-padding: 0.6rem 3rem;
+    }
+
+    .hero-section .overlay {
+      padding: 6rem 0;
+    }
+
+    .hero-section .overlay .abh-container .title {
+      width: 80%;
+    }
+
+    .our-latest-post-section .abh-container .maindiv .blue-white-button,
+    .gradient-white-lightblue .maindiv .blue-white-button {
+      font-size: 14px;
+    }
+
+    .section-smartnews .right {
+      max-height: 400px;
+    }
+
+    .section-smartnews .right img {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .section-why-subscribe-us .abh-container .right {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .hero-section .overlay {
+      padding: 4rem 0;
+    }
+
+    .section-smartnews .abh-container {
+      flex-direction: column;
+    }
+
+    .section-smartnews .abh-container .left {
+      width: 100%;
+    }
+
+    .section-smartnews .abh-container .right {
+      width: 70%;
+      margin-top: var(--heading-top-maring);
+    }
+
+    .section-smartnews .abh-container .right img {
+      width: 100%;
+    }
+
+    .section-why-subscribe-us .abh-container {
+      flex-direction: column;
+    }
+
+    .section-why-subscribe-us .abh-container .left {
+      width: 100%;
+    }
+
+    .section-why-subscribe-us .abh-container .right {
+      width: 70%;
+      margin: auto;
+      margin-top: var(--heading-top-maring);
+    }
+
+    .section-why-subscribe-us .abh-container .right img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    :root {
+      --main-heading-size: 26px;
+      --heading2-size: 20px;
+      --heading-top-maring: 1rem;
+      --subscribe-btn-padding: 0.6rem 3rem;
+      --line-height: 1.8rem !important;
+    }
+
+    .abh-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hero-section .overlay .abh-container .title {
+      width: 100%;
+      text-align: left;
+    }
+
+    .overlay .abh-container .heading {
+      width: 100%;
+      margin: auto;
+      text-align: left;
+      line-height: 2.2rem;
+    }
+
+    .overlay .abh-container .title {
+      line-height: 1.4rem;
+      width: 100%;
+    }
+
+    .section-smartnews .abh-container .right {
+      width: 90%;
+    }
+
+    .section-why-subscribe-us .abh-container .right {
+      width: 80%;
+    }
+
+    .gradient-white-lightblue .maindiv {
+      padding: 2rem 1rem;
+    }
+
+    .section-smartnews .abh-container .left .para {
+      line-height: 1.4rem;
+      width: 100%;
+    }
+
+
+    .section-why-subscribe-us .abh-container .left {
+      padding-right: 0;
+    }
+
+    .our-latest-post-section .abh-container {
+      width: 100%;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .our-latest-post-section .abh-container .maindiv {
+      margin-top: 1rem;
+    }
+
+    .section-why-subscribe-us .abh-container {
+      padding-top: 2rem;
+    }
+
+    .section-why-subscribe-us .abh-container .left .ul-text {
+      font-size: calc(var(--heading2-size) * 0.84);
+    }
+
+    .section-why-subscribe-us .abh-container .left .ul-heading {
+      font-size: calc(var(--heading2-size) * 0.94);
+      font-weight: bold;
+    }
+
+    .abh-container .companyname img {
+      width: 20px;
+    }
+
+    .abh-container .companyname {
+      justify-content: start;
+    }
+
+  }
+
+  footer {
+    margin-top: 0;
+
+  }
+
+  /* Testimonials Start */
+
+  /* Testimonials section styles */
+  .testimonials-section {
+    background-color: #000;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container_rk {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* align-items: center; */
+  }
+
+  h2.section-header {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Arvo';
+    font-size: 3vw;
+  }
+
+  .section-header p {
+    font-size: 16px;
+    color: #666666;
+    margin-top: 10px;
+  }
+
+  /* Swiper Styles */
+  .swiper {
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 20px;
+    flex-direction: column;
+    max-width: 320px;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ea256a;
+  }
+
+  .testimonial-text {
+    font-size: 1.2vw;
+    color: #000;
+    line-height: 1.2;
+    text-align: left;
+    font-family: 'Raleway';
+  }
+
+  .read-more {
+    color: #ea256a;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .testimonial-author {
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #000;
+    margin-top: 20px;
+    font-family: 'Arvo';
+  }
+
+  .testimonial-position {
+    font-size: 14px;
+    color: #666666;
+  }
+
+  .fas.fa-quote-right {
+    font-size: 50px;
+    color: rgba(95, 32, 67, 0.2);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  /* Navigation buttons */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff;
+    border: 2px solid;
+    border-radius: 50%;
+    background: #ea256a;
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 25px;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    font-size: 25px;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .swiper-slide {
+      max-width: 100%;
+      flex-direction: column;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .section-header {
+      text-align: center;
+    }
+  }
+
+  /* Testimonials End */
+</style>
+<div class="custom-static-page-content">
+  <div class="abh-container-fu">
+  </div>
+  <div class="hero-section abh-container-full">
+    <div class="overlay">
+      <div class="abh-container">
+        <div class="companyname">
+          <img src="https://www.thecore.in/h-upload/2024/09/20/980429-coreiconwhite.png" alt="logo">
+          <span>The Core Newsletter</span>
+        </div>
+        <h1 class="heading">The Only Insights That Matter</h1>
+        <p class="title">Stay ahead with The Core. We bring you the best in-depth analysis, exclusive stories,
+          and expert perspectives on India's business, markets, and economic policies.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="gradient-white-lightblue abh-container-full">
+    <div class="maindiv">
+      <button class="blue-white-button login-btn-popup">
+        <span> Sign up for free!</span>
+      </button>
+      <div
+        style=" margin:15px auto; width:clamp(328px, 65%, 700px); font-size: clamp(10px, 1vw, 12px); line-height:150%;">
+        To ensure you receive our newsletters, add <a
+          href="mailto:thecore@thecoredaily.thecore.in"><u>thecore@thecoredaily.thecore.in</u></a> to your safe senders
+        list and check your spam folder if they aren't in your inbox</div>
+    </div>
+  </div>
+
+  <div class="section-smartnews abh-container-full">
+    <div class="abh-container">
+      <div class="left">
+        <h2 class="title custom-h2">Smart News, <br>
+          Smart Reads.</h2>
+        <p class="para">
+          Get to the bottom of the most important daily updates on business, markets, and economic policies.
+          Delivered straight into your inbox every day at 8 am IST.
+        </p>
+      </div>
+      <div class="right">
+        <img src="https://www.thecore.in/h-upload/2024/09/20/980430-smart-reads-new-png-1.png" alt="image">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="our-latest-post-section abh-container-full">
+    <div class="abh-container">
+      <div>
+        <img src="https://www.thecore.in/h-upload/2024/09/20/980429-coreiconwhite.png" alt="logo" style=" width:30px;">
+        <span>The Core Newsletter</span>
+      </div>
+      <h2 class="title ">Previous Posts</h2>
+      <div class="widget-holder">
+        <iframe width="100%" height="440" src="https://rss.app/embed/v1/carousel/jymP6iEsawvdlDZJ"
+          frameborder="0"></iframe>
+      </div>
+      <div class="maindiv">
+        <button class="blue-white-button login-btn-popup">
+          <span> Sign up for free!</span>
+        </button>
+        <div
+          style=" margin:15px auto; width:clamp(328px, 65%, 700px); font-size: clamp(10px, 1vw, 12px); line-height:150%;">
+          To ensure you receive our newsletters, add <a
+            href="mailto:thecore@thecoredaily.thecore.in"><u>thecore@thecoredaily.thecore.in</u></a> to your safe
+          senders list and check your spam folder if they aren't in your inbox</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Testimonials Start-->
+
+  <section class="testimonials-section">
+    <div class="container_rk">
+      <h2 class="section-header">What they say about us</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper" id="testimonial-wrapper">
+          <!-- Testimonial slides will be injected here -->
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include Swiper JS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <script>
+    // Google Sheets API key and Sheet ID
+    const apiKey = 'AIzaSyD6RFzhLy5nuiCFOqgVM6LaG1DAqsS3qAk'; // Replace with your actual API key
+    const sheetId = '1Ey5VEqUHUUQzioO0mxzdeVIdziSb6WrZkn34LkMV57Y'; // Replace with your actual Sheet ID
+    const range = 'Testimonial'; // Adjust based on your sheet name
+
+    // Fetch testimonials from Google Sheets
+    async function fetchTestimonials() {
+      try {
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.values;
+      } catch (error) {
+        console.error('Error fetching data from Google Sheets:', error);
+      }
+    }
+
+    // Function to create Swiper slides with testimonial data
+    function createSwiperSlides(testimonials) {
+      const swiperWrapper = document.getElementById('testimonial-wrapper');
+
+      testimonials.forEach((testimonial, index) => {
+        if (index === 0) return; // Skip header row
+
+        const truncatedText = testimonial[1].length > 100 ? testimonial[1].substring(0, 100) + '...' : testimonial[1];
+        const readMoreText = testimonial[1].length > 100 ? `<span class="read-more" onclick="toggleReadMore(this)">Read more</span>` : '';
+
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+        slide.innerHTML = `
+          <p class="testimonial-text">${truncatedText}${readMoreText}</p>
+          <p class="full-text hidden">${testimonial[1]} <span class="read-more" onclick="toggleReadMore(this)">Read less</span></p>
+          <h3 class="testimonial-author">${testimonial[2]}</h3>
+          <p class="testimonial-position">${testimonial[3] || ''}, ${testimonial[4] || ''}</p>
+          <i aria-hidden="true" class="fas fa-quote-right"></i>
+          
+        `;
+        swiperWrapper.appendChild(slide);
+      });
+
+      // Initialize Swiper after slides are added
+      new Swiper('.swiper', {
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000, // Time between slides in milliseconds
+          disableOnInteraction: false, // Autoplay continues after user interaction
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 40
+          }
+        }
+      });
+    }
+
+    // Fetch testimonials and create Swiper slides
+    fetchTestimonials().then(testimonials => {
+      if (testimonials) {
+        createSwiperSlides(testimonials);
+      } else {
+        console.error('No testimonial data found.');
+      }
+    });
+
+    // Toggle between showing full text and truncated text
+    function toggleReadMore(element) {
+      const textElement = element.closest('.swiper-slide');
+      const fullTextElement = textElement.querySelector('.full-text');
+      const shortTextElement = textElement.querySelector('.testimonial-text');
+
+      if (fullTextElement.classList.contains('hidden')) {
+        fullTextElement.classList.remove('hidden');
+        shortTextElement.classList.add('hidden');
+      } else {
+        fullTextElement.classList.add('hidden');
+        shortTextElement.classList.remove('hidden');
+      }
+    }
+  </script>
+
+
+  <!-- Testimonials End-->
+
+
+
+  <div class="section-why-subscribe-us abh-container-full">
+    <div class="abh-container">
+      <div class="left">
+        <h2 class="title custom-h2">Why Subscribe to The Core Newsletters?</h2>
+        <ul>
+          <li>
+            <p class="ul-heading">Comprehensive coverage</p>
+            <span class="ul-text">Get the latest updates on business and policies.</span>
+          </li>
+          <li>
+            <p class="ul-heading">Expert analysis</p>
+            <span class="ul-text"> Insights from industry leaders.</span>
+          </li>
+          <li>
+            <p class="ul-heading">Stay ahead</p>
+            <span class="ul-text"> Be the first to know what’s shaping India.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="/images/why-subscribe.svg" alt="image">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="gradient-white-lightblue abh-container-full">
+    <div class="maindiv">
+      <button class="blue-white-button login-btn-popup">
+        <span> Sign up for free!</span>
+      </button>
+      <div
+        style=" margin:15px auto; width:clamp(328px, 65%, 700px); font-size: clamp(10px, 1vw, 12px); line-height:150%;">
+        To ensure you receive our newsletters, add <a
+          href="mailto:thecore@thecoredaily.thecore.in"><u>thecore@thecoredaily.thecore.in</u></a> to your safe senders
+        list and check your spam folder if they aren't in your inbox</div>
+    </div>
+  </div>
+
+</div>
