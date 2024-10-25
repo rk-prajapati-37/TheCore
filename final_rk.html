@@ -690,112 +690,92 @@ section.testimonials-section {
   </div>
 
   <!-- Testimonials Start-->
-  <section class="testimonials-section">
-    <div class="abh-container">
-      <h2 class="section-header">What they say about us</h2>
-    </div>
-    <div class="owl-carousel owl-theme" id="testimonial-carousel"></div>
+<section class="testimonials-section">
+  <div class="abh-container">
+    <h2 class="section-header">What they say about us</h2>
+  </div>
+  <div class="owl-carousel owl-theme" id="testimonial-carousel"></div>
 
-    <script>
-      const apiKey = 'AIzaSyD6RFzhLy5nuiCFOqgVM6LaG1DAqsS3qAk'; // Replace with your API key
-      const sheetId = '1Ey5VEqUHUUQzioO0mxzdeVIdziSb6WrZkn34LkMV57Y'; // Replace with your Sheet ID
-      const range = 'Testimonial';
+  <script>
+    const apiKey = 'AIzaSyD6RFzhLy5nuiCFOqgVM6LaG1DAqsS3qAk'; // Replace with your API key
+    const sheetId = '1Ey5VEqUHUUQzioO0mxzdeVIdziSb6WrZkn34LkMV57Y'; // Replace with your Sheet ID
+    const range = 'Testimonial';
 
-      async function fetchTestimonials() {
-        try {
-          const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
-          const response = await fetch(url);
-          const data = await response.json();
-          return data.values;
-        } catch (error) {
-          console.error('Error fetching data from Google Sheets:', error);
-        }
+    async function fetchTestimonials() {
+      try {
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.values;
+      } catch (error) {
+        console.error('Error fetching data from Google Sheets:', error);
       }
+    }
 
-      function toggleReadMore(element) {
-        const textElement = element.closest('.item');
-        const fullTextElement = textElement.querySelector('.full-text');
-        const shortTextElement = textElement.querySelector('.testimonial-text');
+    function createCarouselItems(testimonials) {
+      const carousel = $('#testimonial-carousel');
 
-        // Toggle visibility
-        if (fullTextElement.style.display === "none" || fullTextElement.style.display === "") {
-          fullTextElement.style.display = "block";
-          shortTextElement.style.display = "none";
-          element.textContent = 'Read Less';
-        } else {
-          fullTextElement.style.display = "none";
-          shortTextElement.style.display = "block";
-          element.textContent = 'Read More';
-        }
-      }
+      testimonials.forEach((testimonial, index) => {
+        if (index === 0) return; // Skip header row
 
-      function createCarouselItems(testimonials) {
-        const carousel = $('#testimonial-carousel');
+        const fullText = testimonial[1];
+        const authorName = testimonial[2] || 'Unknown Author';
+        const authorPosition = testimonial[3] || '';
 
-        testimonials.forEach((testimonial, index) => {
-          if (index === 0) return; // Skip header row
-
-          const fullText = testimonial[1];
-          const authorName = testimonial[2] || 'Unknown Author';
-          const authorPosition = testimonial[3] || '';
-
-          const truncatedText = fullText.length > 100 ? fullText.substring(0, 100) + '...' : fullText;
-
-          const item = `
-          <div class="item">
-            <h3 class="testimonial-text">${truncatedText}</h3>
-            ${fullText.length > 100 ? `<p class="full-text">${fullText}</p><span class="read-more" onclick="toggleReadMore(this)">Read More</span>` : ''}
-            <div class="author-info">
-              <div class="author-text">
-                <div>
-                  <strong>${authorName}</strong><br>
-                  ${authorPosition ? `<span>${authorPosition}</span>` : ''}
-                </div>
+        const item = `
+        <div class="item">
+          <h3 class="testimonial-text">${fullText}</h3>
+          <div class="author-info">
+            <div class="author-text">
+              <div>
+                <strong>${authorName}</strong><br>
+                ${authorPosition ? `<span>${authorPosition}</span>` : ''}
               </div>
-              <div class="quote"><img src="https://www.thecore.in/h-upload/2024/10/24/998215-right-quote-3.webp?time=1729779370517" alt="Quote"></div>
             </div>
+            <div class="quote"><img src="https://www.thecore.in/h-upload/2024/10/24/998215-right-quote-3.webp?time=1729779370517" alt="Quote"></div>
           </div>
-        `;
-          carousel.append(item);
-        });
-      }
-
-      $(document).ready(function () {
-        fetchTestimonials().then(testimonials => {
-          if (testimonials) {
-            createCarouselItems(testimonials);
-            $('#testimonial-carousel').owlCarousel({
-              loop: true,
-              autoplay: true,
-              autoplayTimeout: 3000,
-              autoplayHoverPause: true,
-              nav: true,
-              navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
-              dots: true,
-              responsive: {
-                0: {
-                  items: 1
-                },
-                600: {
-                  items: 2
-                },
-                1000: {
-                  items: 2
-                },
-                1200: {
-                  items: 3
-                }
-              }
-            });
-          } else {
-            console.error('No testimonial data found.');
-          }
-        });
+        </div>
+      `;
+        carousel.append(item);
       });
-    </script>
+    }
 
-  </section>
-  <!-- Testimonials End-->
+    $(document).ready(function () {
+      fetchTestimonials().then(testimonials => {
+        if (testimonials) {
+          createCarouselItems(testimonials);
+          $('#testimonial-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+            dots: true,
+            responsive: {
+              0: {
+                items: 1
+              },
+              600: {
+                items: 2
+              },
+              1000: {
+                items: 2
+              },
+              1200: {
+                items: 3
+              }
+            }
+          });
+        } else {
+          console.error('No testimonial data found.');
+        }
+      });
+    });
+  </script>
+
+</section>
+<!-- Testimonials End-->
 
 
 
